@@ -48,7 +48,8 @@
                 <p>90%的考生并不是死在了三大评分项的后两项：Language Use和Topic Development上，这些打卡1v5板块都不是问题。</p>
                 <p>最大的问题是,大部分铁磁太“自负”，根本不重视第一评分项Delivery：发音根本无法达到Clear标准,考官听不懂你在说神马！</p>
                 <p>针对这个问题，口语营和部分顺利冲破26分大关的铁磁们策划了最有效的练习改进方法：慢速跟读。</p>
-                <div class="audio-box jbox" data-strip = "[7,8,10,15,10]">
+                <div class="audio-box jbox paused" data-strip = "[7,8,10,15,10]">
+                    <audio preload src="148350676860.mp3"></audio>
                     <div class="prev-strip"></div>
                     <div class="play"></div>
                     <div class="progress">
@@ -78,18 +79,7 @@
 <script type="text/javascript" src="js/WXAudio.js"></script>
 <script type="text/javascript">
 
-var wxAudioObj = $('.audio-box').weixinAudio();
-// 添加单一播放的逻辑
-$('.weixinAudio').on('click',function(event) {
-    var $this = $(this);
-    var currentIndex = $this.index();
-    // 遍历所有对象，找到非当前点击，执行pause()方法;
-    $.each(wxAudioObj,function(i, el) {
-        if(i != 'weixinAudio'+currentIndex){
-            el.pause();
-        }
-    });
-});
+$('.audio-box').WXAudio();
 </script>
 </body>
 

@@ -1,5 +1,5 @@
 (function() {
-	$.fn.weixinAudio = function(options) {
+	$.fn.WXAudio = function(options) {
 		var $this = $(this),
 		    isTouch = 'ontouchstart' in window,
 	        eStart = isTouch ? 'touchstart' : 'mousedown',
