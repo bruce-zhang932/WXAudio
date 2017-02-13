@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="renderer" content="webkit">
+    <title>WXAudio</title>
+    <script src="js/flexbox.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="article">
+            <p class="article-head">口语营120天新版块 Flash Delivery</p>
+            <div class="article-content">
+                <p>90%的考生并不是死在了三大评分项的后两项：Language Use和Topic Development上，这些打卡1v5板块都不是问题。</p>
+                <p>最大的问题是,大部分铁磁太“自负”，根本不重视第一评分项Delivery：发音根本无法达到Clear标准,考官听不懂你在说神马！</p>
+                <p>针对这个问题，口语营和部分顺利冲破26分大关的铁磁们策划了最有效的练习改进方法：慢速跟读。</p>
+                <div class="audio-box jbox paused" data-strip = "[7,8,10,15,10]">
+                    <audio preload src="148350676860.mp3"></audio>
+                    <div class="prev-strip"></div>
+                    <div class="play"></div>
+                    <div class="progress">
+                        <div class="progress-wrap">
+                            <span class="progress-bar"></span>
+                        </div>
+                    </div>
+                    <p class="duration">50''</p>
+                    <div class="next-strip"></div>
+                    <div class="speed-dropdown">
+                        <a href="" class="sd-toggle">1倍</a>
+                        <ul class="sd-menu">
+                            <li><a href="" data-speed = "1">1</a></li>
+                            <li><a href="" data-speed = "0.8">0.8</a></li>
+                            <li><a href="" data-speed = "0.5">0.5</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content" style="background-color: #f2f2f2;">
+                <p>90%的考生并不是死在了三大评分项的后两项：Language Use和Topic Development上，这些打卡1v5板块都不是问题。</p>
+                <p>最大的问题是,大部分铁磁太“自负”，根本不重视第一评分项Delivery：发音根本无法达到Clear标准,考官听不懂你在说神马！</p>
+                <p>针对这个问题，口语营和部分顺利冲破26分大关的铁磁们策划了最有效的练习改进方法：慢速跟读。</p>
+                <div class="audio-box jbox" data-strip = "[7,8,10,15,10]">
+                    <div class="prev-strip"></div>
+                    <div class="play"></div>
+                    <div class="progress">
+                        <span class="progress-bar"></span>
+                    </div>
+                    <p class="duration">50''</p>
+                    <div class="next-strip"></div>
+                    <div class="speed-dropdown">
+                        <a href="" class="sd-toggle">1倍</a>
+                        <ul class="sd-menu" style="top:-3.9rem;">
+                            <li><a href="">0.8倍</a></li>
+                            <li><a href="">0.5倍</a></li>
+							<li><a href="">0.5倍</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sign-area jbox">
+            	<a class="sign-btn">签到</a>
+            	<div class="sign-right jbox">
+            		<a href="" class="sign-prev"></a>
+            		<a href="" class="sign-next"></a>
+            	</div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/WXAudio.js"></script>
+<script type="text/javascript">
+
+var wxAudioObj = $('.audio-box').weixinAudio();
+// 添加单一播放的逻辑
+$('.weixinAudio').on('click',function(event) {
+    var $this = $(this);
+    var currentIndex = $this.index();
+    // 遍历所有对象，找到非当前点击，执行pause()方法;
+    $.each(wxAudioObj,function(i, el) {
+        if(i != 'weixinAudio'+currentIndex){
+            el.pause();
+        }
+    });
+});
+</script>
+</body>
+
+</html>
